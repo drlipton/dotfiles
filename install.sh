@@ -9,17 +9,7 @@ fi
 
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
-$SUDO DEBIAN_FRONTEND=noninteractive apt install -y tzdata
-$SUDO apt install -y neovim tmux zsh ripgrep
-
-# Install git and curl if not already present
-if ! command -v git >/dev/null 2>&1; then
-	$SUDO apt install -y git
-fi
-
-if ! command -v curl >/dev/null 2>&1; then
-	$SUDO apt install -y curl
-fi
+$SUDO DEBIAN_FRONTEND=noninteractive apt install -y tzdata neovim tmux zsh ripgrep git curl
 
 # Install Oh My Zsh (optional)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
