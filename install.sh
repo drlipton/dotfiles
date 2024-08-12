@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Check if sudo is available
+if command -v sudo >/dev/null 2>&1; then
+	SUDO="sudo"
+else
+	SUDO=""
+fi
+
+# Install necessary packages (adjust for your package manager)
+$SUDO apt update
+$SUDO DEBIAN_FRONTEND=noninteractive apt install -y tzdata
+$SUDO apt install -y neovim tmux zsh ripgrep
+
+# Install git and curl if not already present
+if ! command -v git >/dev/null 2>&1; then
+	$SUDO apt install -y git
+fi
+
+if ! command -v curl >/dev/null 2>&1; then
+	$SUDO apt install -y curl
+fi
+
+# Install Oh My Zsh (optional)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Clone your configuration repositories
+#git clone https://github.com/drlipton/dotfiles
+
+# Copy configuration files
+cp nvim ~/.config/nvim
+cp tmux.conf ~/.tmux.conf
+cp zshrc ~/.zshrc
+
+# Set Zsh as default shell (optional)
+chsh -s $(which zsh)
+
+echo "Installation complete! Remember to source your Zsh configuration if you made changes."
