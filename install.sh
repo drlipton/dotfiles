@@ -9,7 +9,7 @@ fi
 
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
-$SUDO DEBIAN_FRONTEND=noninteractive apt install -y tzdata neovim tmux zsh ripgrep git curl
+$SUDO DEBIAN_FRONTEND=noninteractive apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch
 
 # Install Oh My Zsh (optional)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -19,8 +19,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Copy configuration files
 cp nvim ~/.config/nvim
-cp tmux.conf ~/.tmux.conf
-cp zshrc ~/.zshrc
+cp tmux/tmux.conf ~/.tmux.conf
+cp zsh/zshrc ~/.zshrc
 
 # Set Zsh as default shell (optional)
 chsh -s $(which zsh)
