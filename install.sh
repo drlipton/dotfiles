@@ -10,7 +10,10 @@ fi
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
 
-$SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential
+$SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd
+
+npm install -g pyright
+npm install -g bash-language-server
 
 # Install Oh My Zsh (optional)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
