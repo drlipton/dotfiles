@@ -13,5 +13,13 @@ require("lazy").setup({
   require("plugins.vim-tmux-yank"),
   require("plugins.cmp-nvim"),
   require("plugins.copilot-chat"),
-  -- Add more plugins here
+  require("plugins.nvim-snippets"),
+  require("plugins.indent-blankline"),
+  require("plugins.mason"),
+  require("plugins.copilot"),
+  require("plugins.nvim-lint"),
+  require("plugins.vim-surround"),
+  require("plugins.grug-far"),
+  require("plugins.dashboard-nvim"),
+  require("plugins.persistence"),
 })

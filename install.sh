@@ -15,8 +15,6 @@ $SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip
 npm install -g pyright
 npm install -g bash-language-server
 
-# Install Oh My Zsh (optional)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Clone your configuration repositories
 #git clone https://github.com/drlipton/dotfiles
@@ -40,6 +38,8 @@ cp /tmp/nerdfont/*.ttf ~/.local/share/fonts/
 cp /tmp/nerdfont/FiraCode-Regular Nerd Font Complete.ttf ~/.local/share/fonts/
 fc-cache -fv
 
+# Install Oh My Zsh (optional)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Set Zsh as default shell (optional)
 chsh -s $(which zsh)
 

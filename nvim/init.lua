@@ -23,3 +23,4 @@ vim.opt.titlestring = "%{expand('%:p:h')}"
 -- Load plugins from the lua/plugins directory
 require("plugins")
 require("cmp-config")
+
