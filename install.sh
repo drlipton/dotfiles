@@ -2,25 +2,26 @@
 
 # Check if sudo is available
 if command -v sudo >/dev/null 2>&1; then
-	SUDO="sudo"
+  SUDO="sudo"
 else
-	SUDO=""
+  SUDO=""
 fi
 
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
 
-$SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd
+$SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd fd-find
 
 npm install -g pyright
 npm install -g bash-language-server
-
 
 # Clone your configuration repositories
 #git clone https://github.com/drlipton/dotfiles
 
 # Copy configuration files
 mkdir -p ~/.config/nvim
+
+mv ~/.config/nvim{,.bak}
 
 cp -r nvim ~/.config/
 cp tmux/tmux.conf ~/.tmux.conf

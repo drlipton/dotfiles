@@ -45,7 +45,7 @@ return {
 --	},
 	
 	--window_background_image = "c:\\Users\\aleu1c0g0702\\.config\\wezterm\\wallpapers\\20.gif",
-	window_background_opacity = 0.97,
+	window_background_opacity = 0.85,
 	color_scheme = "catppuccin-mocha",
 	window_padding = {
 		left = 3,
@@ -229,4 +229,3 @@ return {
 		},
 	},
 }
-

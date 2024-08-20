@@ -1,23 +1,18 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
   event = "BufReadPost",
-  opts = function()
-    LazyVim.toggle.map("<leader>ug", {
-      name = "Indention Guides",
-      get = function()
-        return require("ibl.config").get_config(0).enabled
-      end,
-      set = function(state)
-        require("ibl").setup_buffer(0, { enabled = state })
-      end,
-    })
-
-    return {
-      indent = {
-        char = "│",
-        tab_char = "│",
+  config = function()
+    require("indent_blankline").setup {
+      -- You can add more configuration options here
+      char = "│",
+      tab_char = "│",
+      show_current_context = true,
+      show_current_context_start = true,
+      show_end_of_line = false,
+      scope = {
+        show_start = false,
+        show_end = false,
       },
-      scope = { show_start = false, show_end = false },
       exclude = {
         filetypes = {
           "help",
@@ -35,5 +30,5 @@ return {
       },
     }
   end,
-  main = "ibl",
 }
+
