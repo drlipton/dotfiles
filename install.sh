@@ -2,15 +2,21 @@
 
 # Check if sudo is available
 if command -v sudo >/dev/null 2>&1; then
-  SUDO="sudo"
+    SUDO="sudo"
 else
-  SUDO=""
+    SUDO=""
 fi
 
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
 
-$SUDO apt install -y tzdata neovim tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd fd-find
+$SUDO apt install -y tzdata tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd fd-find fuse libfuse2
+
+git clone https://github.com/neovim/neovim.git
+cd neovim
+make CMAKE_BUILD_TYPE=Release
+$SUDO make install
+
 
 npm install -g pyright
 npm install -g bash-language-server
