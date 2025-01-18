@@ -10,7 +10,7 @@ fi
 # Install necessary packages (adjust for your package manager)
 $SUDO apt update
 
-$SUDO apt install -y tzdata tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd fd-find fuse libfuse2
+$SUDO apt install -y tzdata tmux zsh ripgrep git curl neofetch wget unzip fontconfig build-essential xclip nodejs npm clangd fd-find fuse libfuse2 gettext
 
 git clone https://github.com/neovim/neovim.git
 cd neovim
