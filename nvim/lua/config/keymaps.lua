@@ -38,3 +38,6 @@ vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent =
 -- Switch between tabs
 vim.keymap.set("n", "<C-A-h>", ":tabprevious<CR>", { silent = true })
 vim.keymap.set("n", "<C-A-l>", ":tabnext<CR>", { silent = true })
+-- Obsidian
+vim.keymap.set("n", "<C-o>", ":ObsidianToday<CR>", { silent = true })
+vim.keymap.set("n", "<C-A-o>", ":ObsidianNew<CR>", { silent = true })
