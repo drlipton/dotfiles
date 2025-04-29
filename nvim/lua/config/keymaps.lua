@@ -34,3 +34,7 @@ vim.api.nvim_set_keymap("t", "<C-l>", [[<C-\><C-n><C-w>l]], { noremap = true, si
 
 -- Enter normal mode in terminal with <Esc>
 vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+
+-- Switch between tabs
+vim.keymap.set("n", "<C-A-h>", ":tabprevious<CR>", { silent = true })
+vim.keymap.set("n", "<C-A-l>", ":tabnext<CR>", { silent = true })
