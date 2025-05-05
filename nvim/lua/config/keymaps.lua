@@ -41,3 +41,4 @@ vim.keymap.set("n", "<C-A-l>", ":tabnext<CR>", { silent = true })
 -- Obsidian
 vim.keymap.set("n", "<C-o>", ":ObsidianToday<CR>", { silent = true })
 vim.keymap.set("n", "<C-A-o>", ":ObsidianNew<CR>", { silent = true })
+vim.keymap.set("n", "<C-A-a>", ":ObsidianTags<CR>", { silent = true })
